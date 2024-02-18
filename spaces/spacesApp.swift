@@ -22,11 +22,25 @@ class AppDelegate : NSObject, UIApplicationDelegate {
 struct spacesApp: App {
     // register app delegate for Firebase setup
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    
+    @Environment(\.openImmersiveSpace) private var openImmersiveSpace
+
     @StateObject var selectedVM = SelectedItemViewModel()
+    @State private var appState = AppState()
+    
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                HomeView().environmentObject(selectedVM)
+                HomeView()
+                    .environmentObject(selectedVM)
+                    .environment(appState)
+                    .onChange(of: appState.phase.isImmersed) { _, showMRView in
+                        if showMRView {
+                            Task {
+                                await openImmersiveSpace(id: "SpaceEditor")
+                            }
+                        }
+                    }
             }
         }
         
@@ -35,5 +49,9 @@ struct spacesApp: App {
         }
         .windowStyle(.volumetric)
         .defaultSize(width: 1, height: 1, depth: 1, in: .meters)
+        
+        ImmersiveSpace(id: "SpaceEditor") {
+            SpaceEditorView()
+        }
     }
 }
