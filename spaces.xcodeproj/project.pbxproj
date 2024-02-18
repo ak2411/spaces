@@ -9,12 +9,25 @@
 /* Begin PBXBuildFile section */
 		E80BC4592B789FBB00506FFA /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = E80BC4582B789FBB00506FFA /* RealityKitContent */; };
 		E80BC45B2B789FBB00506FFA /* spacesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80BC45A2B789FBB00506FFA /* spacesApp.swift */; };
-		E80BC45D2B789FBB00506FFA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80BC45C2B789FBB00506FFA /* ContentView.swift */; };
-		E80BC45F2B789FBB00506FFA /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80BC45E2B789FBB00506FFA /* ImmersiveView.swift */; };
 		E80BC4612B789FBB00506FFA /* ImageBasedLighting.skybox in Resources */ = {isa = PBXBuildFile; fileRef = E80BC4602B789FBB00506FFA /* ImageBasedLighting.skybox */; };
 		E80BC4632B789FBC00506FFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E80BC4622B789FBC00506FFA /* Assets.xcassets */; };
 		E80BC4662B789FBC00506FFA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E80BC4652B789FBC00506FFA /* Preview Assets.xcassets */; };
 		E80BC4712B789FBD00506FFA /* spacesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80BC4702B789FBD00506FFA /* spacesTests.swift */; };
+		E80D6BDC2B7C877E0078212F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80D6BDB2B7C877E0078212F /* HomeView.swift */; };
+		E80D6BDE2B7C95FC0078212F /* cloud.usdz in Resources */ = {isa = PBXBuildFile; fileRef = E80D6BDD2B7C95FC0078212F /* cloud.usdz */; };
+		E82BAB5D2B7E9C52009EBEBB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E82BAB5C2B7E9C51009EBEBB /* GoogleService-Info.plist */; };
+		E82BAB602B7E9DB0009EBEBB /* Sticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82BAB5F2B7E9DB0009EBEBB /* Sticker.swift */; };
+		E82BAB632B7EA083009EBEBB /* StickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82BAB622B7EA083009EBEBB /* StickerView.swift */; };
+		E82BAB682B7EA36F009EBEBB /* StickersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82BAB672B7EA36F009EBEBB /* StickersListViewModel.swift */; };
+		E82BAB6A2B7ED574009EBEBB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E82BAB692B7ED574009EBEBB /* FirebaseFirestore */; };
+		E84814EB2B7E9512008B6482 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E84814EA2B7E9512008B6482 /* FirebaseFirestoreSwift */; };
+		E84814ED2B7E9512008B6482 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = E84814EC2B7E9512008B6482 /* FirebaseStorage */; };
+		E859BE0B2B7EDDCC0012F4AC /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E859BE0A2B7EDDCC0012F4AC /* String+Extension.swift */; };
+		E85F37562B80283300DB11F2 /* SelectedItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85F37552B80283300DB11F2 /* SelectedItemViewModel.swift */; };
+		E85F375A2B80364E00DB11F2 /* InstantiatedStickersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85F37592B80364E00DB11F2 /* InstantiatedStickersViewModel.swift */; };
+		E8F737C02B812B8B00ED222F /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F737BF2B812B8A00ED222F /* URL+Extension.swift */; };
+		E8F737C42B81330A00ED222F /* StickerItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F737C32B81330A00ED222F /* StickerItemViewModel.swift */; };
+		E8F737C82B8143A600ED222F /* StickerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F737C72B8143A600ED222F /* StickerItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,14 +44,24 @@
 		E80BC4532B789FBB00506FFA /* spaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E80BC4572B789FBB00506FFA /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		E80BC45A2B789FBB00506FFA /* spacesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spacesApp.swift; sourceTree = "<group>"; };
-		E80BC45C2B789FBB00506FFA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		E80BC45E2B789FBB00506FFA /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
 		E80BC4602B789FBB00506FFA /* ImageBasedLighting.skybox */ = {isa = PBXFileReference; lastKnownFileType = file.skybox; path = ImageBasedLighting.skybox; sourceTree = "<group>"; };
 		E80BC4622B789FBC00506FFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E80BC4652B789FBC00506FFA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E80BC4672B789FBC00506FFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E80BC46C2B789FBD00506FFA /* spacesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spacesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E80BC4702B789FBD00506FFA /* spacesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spacesTests.swift; sourceTree = "<group>"; };
+		E80D6BDB2B7C877E0078212F /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E80D6BDD2B7C95FC0078212F /* cloud.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = cloud.usdz; path = ../../HappyBeam/HappyBeam/USDZs/cloud.usdz; sourceTree = "<group>"; };
+		E82BAB5C2B7E9C51009EBEBB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E82BAB5F2B7E9DB0009EBEBB /* Sticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sticker.swift; sourceTree = "<group>"; };
+		E82BAB622B7EA083009EBEBB /* StickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerView.swift; sourceTree = "<group>"; };
+		E82BAB672B7EA36F009EBEBB /* StickersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickersListViewModel.swift; sourceTree = "<group>"; };
+		E859BE0A2B7EDDCC0012F4AC /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		E85F37552B80283300DB11F2 /* SelectedItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedItemViewModel.swift; sourceTree = "<group>"; };
+		E85F37592B80364E00DB11F2 /* InstantiatedStickersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantiatedStickersViewModel.swift; sourceTree = "<group>"; };
+		E8F737BF2B812B8A00ED222F /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		E8F737C32B81330A00ED222F /* StickerItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerItemViewModel.swift; sourceTree = "<group>"; };
+		E8F737C72B8143A600ED222F /* StickerItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +70,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E80BC4592B789FBB00506FFA /* RealityKitContent in Frameworks */,
+				E82BAB6A2B7ED574009EBEBB /* FirebaseFirestore in Frameworks */,
+				E84814ED2B7E9512008B6482 /* FirebaseStorage in Frameworks */,
+				E84814EB2B7E9512008B6482 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +93,7 @@
 				E80BC4562B789FBB00506FFA /* Packages */,
 				E80BC46F2B789FBD00506FFA /* spacesTests */,
 				E80BC4542B789FBB00506FFA /* Products */,
+				E84814E72B7E9512008B6482 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,8 +110,12 @@
 			isa = PBXGroup;
 			children = (
 				E80BC45A2B789FBB00506FFA /* spacesApp.swift */,
-				E80BC45C2B789FBB00506FFA /* ContentView.swift */,
-				E80BC45E2B789FBB00506FFA /* ImmersiveView.swift */,
+				E859BE092B7EDDBC0012F4AC /* Helpers */,
+				E82BAB642B7EA0AD009EBEBB /* Observables */,
+				E82BAB612B7EA001009EBEBB /* Views */,
+				E82BAB5E2B7E9D97009EBEBB /* Models */,
+				E82BAB5C2B7E9C51009EBEBB /* GoogleService-Info.plist */,
+				E80D6BDD2B7C95FC0078212F /* cloud.usdz */,
 				E80BC4602B789FBB00506FFA /* ImageBasedLighting.skybox */,
 				E80BC4622B789FBC00506FFA /* Assets.xcassets */,
 				E80BC4672B789FBC00506FFA /* Info.plist */,
@@ -117,6 +148,51 @@
 			path = spacesTests;
 			sourceTree = "<group>";
 		};
+		E82BAB5E2B7E9D97009EBEBB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E82BAB5F2B7E9DB0009EBEBB /* Sticker.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E82BAB612B7EA001009EBEBB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E80D6BDB2B7C877E0078212F /* HomeView.swift */,
+				E82BAB622B7EA083009EBEBB /* StickerView.swift */,
+				E8F737C72B8143A600ED222F /* StickerItemView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E82BAB642B7EA0AD009EBEBB /* Observables */ = {
+			isa = PBXGroup;
+			children = (
+				E82BAB672B7EA36F009EBEBB /* StickersListViewModel.swift */,
+				E85F37552B80283300DB11F2 /* SelectedItemViewModel.swift */,
+				E85F37592B80364E00DB11F2 /* InstantiatedStickersViewModel.swift */,
+				E8F737C32B81330A00ED222F /* StickerItemViewModel.swift */,
+			);
+			path = Observables;
+			sourceTree = "<group>";
+		};
+		E84814E72B7E9512008B6482 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E859BE092B7EDDBC0012F4AC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E859BE0A2B7EDDCC0012F4AC /* String+Extension.swift */,
+				E8F737BF2B812B8A00ED222F /* URL+Extension.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +211,9 @@
 			name = spaces;
 			packageProductDependencies = (
 				E80BC4582B789FBB00506FFA /* RealityKitContent */,
+				E84814EA2B7E9512008B6482 /* FirebaseFirestoreSwift */,
+				E84814EC2B7E9512008B6482 /* FirebaseStorage */,
+				E82BAB692B7ED574009EBEBB /* FirebaseFirestore */,
 			);
 			productName = spaces;
 			productReference = E80BC4532B789FBB00506FFA /* spaces.app */;
@@ -186,6 +265,9 @@
 				Base,
 			);
 			mainGroup = E80BC44A2B789FBB00506FFA;
+			packageReferences = (
+				E84814E62B7E949A008B6482 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = E80BC4542B789FBB00506FFA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -202,6 +284,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E80BC4632B789FBC00506FFA /* Assets.xcassets in Resources */,
+				E80D6BDE2B7C95FC0078212F /* cloud.usdz in Resources */,
+				E82BAB5D2B7E9C52009EBEBB /* GoogleService-Info.plist in Resources */,
 				E80BC4662B789FBC00506FFA /* Preview Assets.xcassets in Resources */,
 				E80BC4612B789FBB00506FFA /* ImageBasedLighting.skybox in Resources */,
 			);
@@ -221,9 +305,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E80BC45D2B789FBB00506FFA /* ContentView.swift in Sources */,
+				E8F737C42B81330A00ED222F /* StickerItemViewModel.swift in Sources */,
+				E859BE0B2B7EDDCC0012F4AC /* String+Extension.swift in Sources */,
+				E85F37562B80283300DB11F2 /* SelectedItemViewModel.swift in Sources */,
 				E80BC45B2B789FBB00506FFA /* spacesApp.swift in Sources */,
-				E80BC45F2B789FBB00506FFA /* ImmersiveView.swift in Sources */,
+				E80D6BDC2B7C877E0078212F /* HomeView.swift in Sources */,
+				E8F737C02B812B8B00ED222F /* URL+Extension.swift in Sources */,
+				E8F737C82B8143A600ED222F /* StickerItemView.swift in Sources */,
+				E82BAB632B7EA083009EBEBB /* StickerView.swift in Sources */,
+				E82BAB602B7E9DB0009EBEBB /* Sticker.swift in Sources */,
+				E85F375A2B80364E00DB11F2 /* InstantiatedStickersViewModel.swift in Sources */,
+				E82BAB682B7EA36F009EBEBB /* StickersListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,12 +469,13 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Coffee-With-A.spaces";
+				PRODUCT_BUNDLE_IDENTIFIER = kosasih.spaces;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -403,12 +496,13 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Coffee-With-A.spaces";
+				PRODUCT_BUNDLE_IDENTIFIER = kosasih.spaces;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -491,10 +585,36 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		E84814E62B7E949A008B6482 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.21.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		E80BC4582B789FBB00506FFA /* RealityKitContent */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RealityKitContent;
+		};
+		E82BAB692B7ED574009EBEBB /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E84814E62B7E949A008B6482 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		E84814EA2B7E9512008B6482 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E84814E62B7E949A008B6482 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		E84814EC2B7E9512008B6482 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E84814E62B7E949A008B6482 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
