@@ -66,6 +66,8 @@ struct StickerItemView: View {
         }
         .buttonStyle(.borderless)
         .buttonBorderShape(.roundedRectangle(radius: 20))
+    }.onAppear {
+        appState.phase = .editSpace
     }
 }
 

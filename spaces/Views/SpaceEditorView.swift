@@ -16,7 +16,7 @@ struct SpaceEditorView: View {
     
     var body: some View {
         RealityView { content in
-            
+            content.add(appState.root)
         }
         .onChange(of: appState.phase.isImmersed) { _, showMRView in
             if !showMRView {
