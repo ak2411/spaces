@@ -9,7 +9,10 @@ import SwiftUI
 
 struct StickerView: View {
     @StateObject var vm = StickersListViewModel()
-    
+    @Environment(AppState.self) var appState
+    @Environment(\.openImmersiveSpace) private var openImmersiveSpace
+
+
     private let gridItems: [GridItem] =
     [.init(.adaptive(minimum: 240), spacing: 16)]
     
@@ -19,24 +22,31 @@ struct StickerView: View {
         ScrollView {
             LazyVGrid(columns: gridItems) {
                 ForEach(vm.stickers) { sticker in
-                    StickerItemView(sticker: sticker).onDrag{NSItemProvider()}
+                    StickerItemView(sticker: sticker)
+                        .onDrag{NSItemProvider()}
+                        .environment(appState)
                 }
             }.padding(.vertical)
         }
-        .onAppear { vm.listenToItems() }
+        .onAppear { 
+            vm.listenToItems()
+            appState.phase = .editSpace
+        }
     }
 }
 
 struct StickerItemView: View {
     let sticker: Sticker
     
+    @Environment(AppState.self) var appState
     @EnvironmentObject var selectedVM: SelectedItemViewModel
     @Environment(\.openWindow) var openWindow
 
     var body: some View {
         Button {
-            selectedVM.selectedItem = sticker
-            openWindow(id: "InstantiatedStickerItemView")
+            appState.addEntityToSpace(sticker: sticker)
+//            selectedVM.selectedItem = sticker
+//            openWindow(id: "InstantiatedStickerItemView")
         } label: {
             VStack {
                 ZStack {
@@ -54,7 +64,7 @@ struct StickerItemView: View {
                         // add default rectangle
                         RoundedRectangle(cornerRadius: 16)
                             .foregroundStyle(Color.gray.opacity(0.3))
-                        Text("Mystery")
+                        Text("Mystery model")
                     }
                 }
                 .frame(width:160, height: 160)
@@ -66,11 +76,10 @@ struct StickerItemView: View {
         }
         .buttonStyle(.borderless)
         .buttonBorderShape(.roundedRectangle(radius: 20))
-    }.onAppear {
-        appState.phase = .editSpace
     }
 }
 
 #Preview {
     StickerView()
+        .environment(AppState())
 }

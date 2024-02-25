@@ -5,29 +5,31 @@
 //  Created by Angelica Kosasih on 2/10/24.
 //
 
-import SwiftUI
 import FirebaseCore
+import SwiftUI
 
 // AppDelegate to initialize firebase
-class AppDelegate : NSObject, UIApplicationDelegate {
+class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication,
-                       didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool
+    {
         FirebaseApp.configure()
 
         return true
-      }
+    }
 }
 
 @main
+@MainActor
 struct spacesApp: App {
     // register app delegate for Firebase setup
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    
     @Environment(\.openImmersiveSpace) private var openImmersiveSpace
 
-    @StateObject var selectedVM = SelectedItemViewModel()
     @State private var appState = AppState()
-    
+    @State private var style: ImmersionStyle = .full
+    @StateObject var selectedVM = SelectedItemViewModel()
+
     var body: some Scene {
         WindowGroup {
             NavigationStack {
@@ -35,6 +37,7 @@ struct spacesApp: App {
                     .environmentObject(selectedVM)
                     .environment(appState)
                     .onChange(of: appState.phase.isImmersed) { _, showMRView in
+                        print("new state")
                         if showMRView {
                             Task {
                                 await openImmersiveSpace(id: "SpaceEditor")
@@ -43,15 +46,21 @@ struct spacesApp: App {
                     }
             }
         }
-        
+
         WindowGroup(id: "InstantiatedStickerItemView") {
             InstantiatedStickerItemView().environmentObject(selectedVM)
         }
         .windowStyle(.volumetric)
         .defaultSize(width: 1, height: 1, depth: 1, in: .meters)
-        
+
         ImmersiveSpace(id: "SpaceEditor") {
             SpaceEditorView()
+                .environment(appState)
         }
+//        .immersionStyle(selection: $style, in: .full)
+    }
+
+    init() {
+        EditableComponent.registerComponent()
     }
 }

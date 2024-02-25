@@ -12,7 +12,8 @@ import RealityKitContent
 struct HomeView: View {
     @EnvironmentObject var selectedVM: SelectedItemViewModel
     @State private var createSpace = false
-    
+    @Environment(AppState.self) var appState
+
     @Environment(\.openWindow) var openWindow
     @Environment(\.dismissWindow) var dismissWindow
 
@@ -26,6 +27,7 @@ struct HomeView: View {
                 HStack {
                     NavigationLink {
                         StickerView().environmentObject(selectedVM)
+                            .environment(appState)
                     } label: {
                         Text("Create a space")
                     }
