@@ -19,6 +19,7 @@
 		E82BAB682B7EA36F009EBEBB /* StickersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82BAB672B7EA36F009EBEBB /* StickersListViewModel.swift */; };
 		E82BAB6A2B7ED574009EBEBB /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E82BAB692B7ED574009EBEBB /* FirebaseFirestore */; };
 		E83EC3C32B82A1F40048FD1C /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = E83EC3C22B82A1F40048FD1C /* RealityKitContent */; };
+		E846BAC62B92EB09004545EE /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E846BAC52B92EB09004545EE /* Scene.swift */; };
 		E84814EB2B7E9512008B6482 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E84814EA2B7E9512008B6482 /* FirebaseFirestoreSwift */; };
 		E84814ED2B7E9512008B6482 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = E84814EC2B7E9512008B6482 /* FirebaseStorage */; };
 		E859BE0B2B7EDDCC0012F4AC /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E859BE0A2B7EDDCC0012F4AC /* String+Extension.swift */; };
@@ -63,6 +64,7 @@
 		E82BAB5F2B7E9DB0009EBEBB /* Sticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sticker.swift; sourceTree = "<group>"; };
 		E82BAB622B7EA083009EBEBB /* StickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerView.swift; sourceTree = "<group>"; };
 		E82BAB672B7EA36F009EBEBB /* StickersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickersListViewModel.swift; sourceTree = "<group>"; };
+		E846BAC52B92EB09004545EE /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		E859BE0A2B7EDDCC0012F4AC /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		E85F37552B80283300DB11F2 /* SelectedItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedItemViewModel.swift; sourceTree = "<group>"; };
 		E85F37592B80364E00DB11F2 /* InstantiatedStickersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstantiatedStickersViewModel.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				E82BAB5F2B7E9DB0009EBEBB /* Sticker.swift */,
+				E846BAC52B92EB09004545EE /* Scene.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				E8A6B7712B84607D009C0437 /* Entity+Utilities.swift in Sources */,
 				E8F737C02B812B8B00ED222F /* URL+Extension.swift in Sources */,
 				E8ECF8D32B8AD04A00E081F2 /* SpaceEditorView+Rotate.swift in Sources */,
+				E846BAC62B92EB09004545EE /* Scene.swift in Sources */,
 				E8F737C82B8143A600ED222F /* StickerItemView.swift in Sources */,
 				E82BAB632B7EA083009EBEBB /* StickerView.swift in Sources */,
 				E82BAB602B7E9DB0009EBEBB /* Sticker.swift in Sources */,

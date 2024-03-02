@@ -13,18 +13,18 @@ extension SpaceEditorView {
     /// dragStart is global
     @MainActor
     func handleDrag(_ value: EntityTargetValue<DragGesture.Value>, ended: Bool = false) {
+        let tappedEntity = value.entity
         if ended {
-            dragStart = nil
+            tappedEntity.editableComponent?.dragStart = nil
             return
         }
-        let tappedEntity = value.entity
         let translation3D = value.convert(value.gestureValue.translation3D, from: .local, to: .scene)
         let offset = SIMD3<Float>(x: Float(translation3D.x),
                                   y: Float(translation3D.y),
                                   z: Float(translation3D.z))
-        if dragStart == nil {
-            dragStart = tappedEntity.scenePosition
+        if tappedEntity.editableComponent?.dragStart == nil {
+            tappedEntity.editableComponent?.dragStart = tappedEntity.scenePosition
         }
-        tappedEntity.scenePosition = dragStart! + offset
+        tappedEntity.scenePosition = tappedEntity.editableComponent!.dragStart! + offset
     }
 }

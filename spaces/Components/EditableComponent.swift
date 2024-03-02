@@ -12,10 +12,5 @@ public struct EditableComponent: Component {
     /// VARS FOR EDITING
     public var dragStart: SIMD3<Float>?
     public var scaleStart: Float?
-    public var rotationStart: Float?
-
-    /// The entity this component is currently attached to.
-    public var entity: Entity?
-
-    /// The rotation helper entity
+    public var rotationStart: Double?
 }

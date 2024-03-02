@@ -6,6 +6,7 @@
 //
 
 import ARKit
+import FirebaseFirestore
 import FirebaseStorage
 import Foundation
 import RealityKit
@@ -19,9 +20,18 @@ public class AppState {
     var worldInfo = WorldTrackingProvider()
     var session: ARKitSession = .init()
     
-//    func save {
-//        root.forEachDescendant(withComponent: EditableComponent.self)
-//    }
+    func onSave() throws {
+//        TODO: temporary naming. add future feature where names are defined by user or have a default name with counter
+        var space = StickerScene(name: UUID().uuidString)
+        root.forEachDescendant(withComponent: EditableComponent.self) { entity, _ in
+            space.models.append(StickerPose(translation: entity.scenePosition, real: entity.sceneOrientation.real, imag: entity.sceneOrientation.imag, scale: entity.scale(relativeTo: nil)))
+        }
+        do {
+            try Firestore.firestore().collection("spaces").document(space.name).setData(from: space)
+        } catch {
+            throw error
+        }
+    }
 
     func addEntityToSpace(sticker: Sticker) {
         var entity: Entity?

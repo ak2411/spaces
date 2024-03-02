@@ -14,9 +14,9 @@
             filePath = "spaces/Data + State/AppState.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "addEntityToSpace(sticker:)"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "onSave()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -30,9 +30,9 @@
             filePath = "spaces/Data + State/AppState.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "addEntityToSpace(sticker:)"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "onSave()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -46,8 +46,8 @@
             filePath = "spaces/Data + State/AppState.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "addEntityToSpace(sticker:)"
             landmarkType = "7">
          </BreakpointContent>

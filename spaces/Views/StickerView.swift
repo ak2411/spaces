@@ -12,23 +12,26 @@ struct StickerView: View {
     @Environment(AppState.self) var appState
     @Environment(\.openImmersiveSpace) private var openImmersiveSpace
 
-
     private let gridItems: [GridItem] =
-    [.init(.adaptive(minimum: 240), spacing: 16)]
-    
-    
+        [.init(.adaptive(minimum: 240), spacing: 16)]
+
     var body: some View {
         Text("Stickers").font(.largeTitle).padding()
+        Button {
+            do {
+                try appState.onSave()
+            } catch {}
+        } label: { Text("save scene") }
         ScrollView {
             LazyVGrid(columns: gridItems) {
                 ForEach(vm.stickers) { sticker in
                     StickerItemView(sticker: sticker)
-                        .onDrag{NSItemProvider()}
+                        .onDrag { NSItemProvider() }
                         .environment(appState)
                 }
             }.padding(.vertical)
         }
-        .onAppear { 
+        .onAppear {
             vm.listenToItems()
             appState.phase = .editSpace
         }
@@ -37,7 +40,7 @@ struct StickerView: View {
 
 struct StickerItemView: View {
     let sticker: Sticker
-    
+
     @Environment(AppState.self) var appState
     @EnvironmentObject var selectedVM: SelectedItemViewModel
     @Environment(\.openWindow) var openWindow
@@ -67,7 +70,7 @@ struct StickerItemView: View {
                         Text("Mystery model")
                     }
                 }
-                .frame(width:160, height: 160)
+                .frame(width: 160, height: 160)
                 .padding(.bottom, 32)
                 Text(sticker.name)
             }

@@ -13,8 +13,9 @@ import SwiftUI
 extension SpaceEditorView {
     @MainActor
     func handleRotation(_ value: EntityTargetValue<RotateGesture.Value>, ended: Bool = false) {
+        let targetedEntity = value.entity
         if ended {
-            rotationStart = nil
+            targetedEntity.editableComponent?.rotationStart = nil
             return
         }
         var radians = -value.gestureValue.rotation.radians
@@ -24,12 +25,11 @@ extension SpaceEditorView {
         #else
             radians = radians * 8
         #endif
-        let targetedEntity = value.entity
-        if rotationStart == nil {
-            rotationStart = Double(targetedEntity.sceneOrientation.angle)
+        if targetedEntity.editableComponent?.rotationStart == nil {
+            targetedEntity.editableComponent?.rotationStart = Double(targetedEntity.sceneOrientation.angle)
         }
 
-        let startAngleDegrees = Angle(radians: rotationStart!).degrees
+        let startAngleDegrees = Angle(radians: targetedEntity.editableComponent!.rotationStart!).degrees
         let angleDegrees = Angle(radians: radians).degrees + startAngleDegrees
         let angleRadians = Angle(degrees: angleDegrees).radians
 
