@@ -33,6 +33,9 @@
 		E8A6B7762B8480FD009C0437 /* SIMD+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A6B7752B8480FD009C0437 /* SIMD+Utilities.swift */; };
 		E8ECF8D12B8AC10100E081F2 /* EditableComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECF8D02B8AC10100E081F2 /* EditableComponent.swift */; };
 		E8ECF8D32B8AD04A00E081F2 /* SpaceEditorView+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ECF8D22B8AD04A00E081F2 /* SpaceEditorView+Rotate.swift */; };
+		E8F39A882B9398B600BE9AB6 /* SpaceViewerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F39A872B9398B600BE9AB6 /* SpaceViewerView.swift */; };
+		E8F39A8A2B93990000BE9AB6 /* SpacesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F39A892B93990000BE9AB6 /* SpacesListViewModel.swift */; };
+		E8F39A8C2B93A27400BE9AB6 /* SpaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F39A8B2B93A27400BE9AB6 /* SpaceView.swift */; };
 		E8F737C02B812B8B00ED222F /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F737BF2B812B8A00ED222F /* URL+Extension.swift */; };
 		E8F737C42B81330A00ED222F /* StickerItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F737C32B81330A00ED222F /* StickerItemViewModel.swift */; };
 		E8F737C82B8143A600ED222F /* StickerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F737C72B8143A600ED222F /* StickerItemView.swift */; };
@@ -77,6 +80,9 @@
 		E8A6B7752B8480FD009C0437 /* SIMD+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SIMD+Utilities.swift"; sourceTree = "<group>"; };
 		E8ECF8D02B8AC10100E081F2 /* EditableComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableComponent.swift; sourceTree = "<group>"; };
 		E8ECF8D22B8AD04A00E081F2 /* SpaceEditorView+Rotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpaceEditorView+Rotate.swift"; sourceTree = "<group>"; };
+		E8F39A872B9398B600BE9AB6 /* SpaceViewerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceViewerView.swift; sourceTree = "<group>"; };
+		E8F39A892B93990000BE9AB6 /* SpacesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacesListViewModel.swift; sourceTree = "<group>"; };
+		E8F39A8B2B93A27400BE9AB6 /* SpaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceView.swift; sourceTree = "<group>"; };
 		E8F737BF2B812B8A00ED222F /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		E8F737C32B81330A00ED222F /* StickerItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerItemViewModel.swift; sourceTree = "<group>"; };
 		E8F737C72B8143A600ED222F /* StickerItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerItemView.swift; sourceTree = "<group>"; };
@@ -182,6 +188,8 @@
 				E87B30412B8A9DED00994D0A /* SpaceEditorView+Drag.swift */,
 				E87B30432B8AA08D00994D0A /* SpaceEditorView+Scale.swift */,
 				E8ECF8D22B8AD04A00E081F2 /* SpaceEditorView+Rotate.swift */,
+				E8F39A872B9398B600BE9AB6 /* SpaceViewerView.swift */,
+				E8F39A8B2B93A27400BE9AB6 /* SpaceView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -193,6 +201,7 @@
 				E85F37552B80283300DB11F2 /* SelectedItemViewModel.swift */,
 				E85F37592B80364E00DB11F2 /* InstantiatedStickersViewModel.swift */,
 				E8F737C32B81330A00ED222F /* StickerItemViewModel.swift */,
+				E8F39A892B93990000BE9AB6 /* SpacesListViewModel.swift */,
 			);
 			path = Observables;
 			sourceTree = "<group>";
@@ -369,10 +378,13 @@
 				E82BAB632B7EA083009EBEBB /* StickerView.swift in Sources */,
 				E82BAB602B7E9DB0009EBEBB /* Sticker.swift in Sources */,
 				E8F737CF2B81CB0600ED222F /* AppPhase.swift in Sources */,
+				E8F39A882B9398B600BE9AB6 /* SpaceViewerView.swift in Sources */,
 				E85F375A2B80364E00DB11F2 /* InstantiatedStickersViewModel.swift in Sources */,
 				E8F737CD2B81C97E00ED222F /* AppState.swift in Sources */,
 				E8F737CA2B81C8A100ED222F /* SpaceEditorView.swift in Sources */,
+				E8F39A8A2B93990000BE9AB6 /* SpacesListViewModel.swift in Sources */,
 				E8A6B7762B8480FD009C0437 /* SIMD+Utilities.swift in Sources */,
+				E8F39A8C2B93A27400BE9AB6 /* SpaceView.swift in Sources */,
 				E8A6B76F2B8457E0009C0437 /* GlobalEntities.swift in Sources */,
 				E82BAB682B7EA36F009EBEBB /* StickersListViewModel.swift in Sources */,
 				E8ECF8D12B8AC10100E081F2 /* EditableComponent.swift in Sources */,

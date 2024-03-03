@@ -39,8 +39,9 @@ struct spacesApp: App {
                     .onChange(of: appState.phase.isImmersed) { _, showMRView in
                         print("new state")
                         if showMRView {
+                            let sceneId = appState.phase == .viewSpace ? "SpaceViewer" : "SpaceEditor"
                             Task {
-                                await openImmersiveSpace(id: "SpaceEditor")
+                                await openImmersiveSpace(id: sceneId)
                             }
                         }
                     }
@@ -55,6 +56,11 @@ struct spacesApp: App {
 
         ImmersiveSpace(id: "SpaceEditor") {
             SpaceEditorView()
+                .environment(appState)
+        }
+
+        ImmersiveSpace(id: "SpaceViewer") {
+            SpaceView()
                 .environment(appState)
         }
 //        .immersionStyle(selection: $style, in: .full)

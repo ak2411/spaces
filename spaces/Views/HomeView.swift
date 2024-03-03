@@ -5,9 +5,9 @@
 //  Created by Angelica Kosasih on 2/10/24.
 //
 
-import SwiftUI
 import RealityKit
 import RealityKitContent
+import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var selectedVM: SelectedItemViewModel
@@ -24,15 +24,19 @@ struct HomeView: View {
 
             Text("Welcome to Spaces")
 
-                HStack {
-                    NavigationLink {
-                        StickerView().environmentObject(selectedVM)
-                            .environment(appState)
-                    } label: {
-                        Text("Create a space")
-                    }
+            HStack {
+                NavigationLink {
+                    StickerView().environmentObject(selectedVM)
+                        .environment(appState)
+                } label: {
+                    Text("Create a space")
+                }
+                NavigationLink {
+                    SpaceViewerView().environment(appState)
+                } label: {
+                    Text("View a space")
+                }
             }
-            
         }
         .padding()
     }
@@ -42,5 +46,4 @@ struct HomeView: View {
     NavigationStack {
         HomeView()
     }
-    
 }

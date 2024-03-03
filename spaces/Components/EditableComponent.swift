@@ -9,6 +9,7 @@ import Foundation
 import RealityKit
 
 public struct EditableComponent: Component {
+    public var stickerId: String
     /// VARS FOR EDITING
     public var dragStart: SIMD3<Float>?
     public var scaleStart: Float?

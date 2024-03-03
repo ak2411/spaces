@@ -47,7 +47,9 @@ struct StickerItemView: View {
 
     var body: some View {
         Button {
-            appState.addEntityToSpace(sticker: sticker)
+            Task {
+                await appState.addEntityToSpace(sticker: sticker)
+            }
 //            selectedVM.selectedItem = sticker
 //            openWindow(id: "InstantiatedStickerItemView")
         } label: {
