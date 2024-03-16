@@ -37,7 +37,6 @@ struct spacesApp: App {
                     .environmentObject(selectedVM)
                     .environment(appState)
                     .onChange(of: appState.phase.isImmersed) { _, showMRView in
-                        print("new state")
                         if showMRView {
                             let sceneId = appState.phase == .viewSpace ? "SpaceViewer" : "SpaceEditor"
                             Task {

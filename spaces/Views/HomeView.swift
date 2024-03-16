@@ -36,6 +36,8 @@ struct HomeView: View {
                 } label: {
                     Text("View a space")
                 }
+            }.onAppear {
+                appState.phase = .waitingToStart
             }
         }
         .padding()

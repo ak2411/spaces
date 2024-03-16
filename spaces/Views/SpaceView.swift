@@ -12,38 +12,17 @@ import SwiftUI
 
 struct SpaceView: View {
     @Environment(AppState.self) var appState
+    @Environment(\.dismiss) var dismiss
+
     var body: some View {
         RealityView { content in
-            content.add(appState.root)
-            for model in appState.activeSpace!.models {
-                Task {
-                    await getSticker(model: model)
-                }
+            content.add(appState.viewRoot)
+        }.onChange(of: appState.phase) { _, phase in
+            if phase != .viewSpace {
+                dismiss()
             }
-        }
-    }
-
-    @MainActor
-    func getSticker(model: StickerPose) async {
-        do {
-            let docRef = Firestore.firestore().collection("stickers").document(model.stickerId)
-            let doc = try await docRef.getDocument()
-            if doc.exists {
-                if let entity = try await appState.addEntityToSpace(sticker: doc.data(as: Sticker.self)) {
-                    print(entity.name)
-                    entity.scenePosition = model.translation
-                    entity.sceneOrientation = simd_quatf(real: model.rotation.real, imag: model.rotation.imag)
-                    entity.scale = model.scale
-                } else {
-                    return
-                }
-            }
-        } catch {
-            return
+        }.onChange(of: appState.activeSpace) { _, _ in
+            appState.updateStickersInSpace()
         }
     }
 }
-
-// #Preview {
-//    SpaceView(space: .init(name: "test", models: [StickerPose])).environment(AppState())
-// }

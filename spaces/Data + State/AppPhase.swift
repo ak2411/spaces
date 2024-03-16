@@ -7,13 +7,12 @@
 
 import Foundation
 
-
 public enum AppPhase: String, Codable, Sendable, Equatable {
-    case startingUp //loading all assets
-    case waitingToStart //in start screen
+    case startingUp // loading all assets
+    case waitingToStart // in start screen
     case editSpace // in immersive space, to edit
     case viewSpace // in immersive space, just to enjoy
-    
+
     var isImmersed: Bool {
         switch self {
             case .startingUp, .waitingToStart:

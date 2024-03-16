@@ -16,7 +16,7 @@ struct SpaceEditorView: View {
 
     var body: some View {
         RealityView { content in
-            content.add(appState.root)
+            content.add(appState.editRoot)
             /// FOR DEBUGGING PURPOSES
 //            do {
 //                guard let entity: Entity = try? await Entity(named: "toy_car") else {
@@ -33,8 +33,8 @@ struct SpaceEditorView: View {
 //                content.add(entity)
 //            }
         }
-        .onChange(of: appState.phase.isImmersed) { _, showMRView in
-            if !showMRView {
+        .onChange(of: appState.phase) { _, phase in
+            if phase != .editSpace {
                 dismiss()
             }
         }
